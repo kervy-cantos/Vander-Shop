@@ -4,7 +4,7 @@ import React from 'react';
 
 const ProductItem = ({ product }) => {
 	return (
-		<div className='card bg-base-300 shadow-xl mb-4'>
+		<div className='product-cards card bg-base-300 shadow-xl mb-4'>
 			<figure>
 				<Link href={`/product/${product.slug}`}>
 					<Image
