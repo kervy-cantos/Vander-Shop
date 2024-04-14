@@ -12,7 +12,7 @@ const ProductItem = ({ product }) => {
 						alt={product.name}
 						width={300}
 						height={300}
-						className='object-cover h-64 w-full'
+						className='object-cover h-64 w-full mt-4 hover:scale-105 grid-photo'
 					/>
 				</Link>
 			</figure>

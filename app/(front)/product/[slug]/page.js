@@ -22,13 +22,14 @@ const ProductDetails = ({ params }) => {
 						width={640}
 						height={640}
 						sizes='100vw'
+						className='mx-auto md:ms-auto'
 						style={{
-							width: '100%',
+							width: '90%',
 							height: 'auto'
 						}}
 					/>
 				</div>
-				<div>
+				<div className='md:me-3'>
 					<ul className='space-y-4'>
 						<li>
 							<h1 className='text-xl'>{product.name}</h1>
@@ -38,10 +39,10 @@ const ProductDetails = ({ params }) => {
 						</li>
 						<li>{product.brand}</li>
 						<li>
-							<div className='divider'></div>
+							<div className='divider divider-accent'> Description</div>
 						</li>
 						<li>
-							Description: <p>{product.description}</p>
+							<p>{product.description}</p>
 						</li>
 					</ul>
 				</div>
