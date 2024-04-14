@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
 					<Header />
 					{children}
 
-					<footer className='footer footer-center p-4 bg-base-300 text-base-content'>
+					<footer className='footer footer-center mt-3 p-4 bg-base-300 text-base-content'>
 						<p>Copyright @ 2024 - Vander Shop</p>
 					</footer>
 				</div>
