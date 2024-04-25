@@ -1,11 +1,24 @@
 import AddToCart from '@/components/products/AddToCart';
 import data from '@/lib/data';
+import productService from '@/lib/services/productService';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ProductDetails = ({ params }) => {
+export async function generateMetadata({ params }) {
+	const product = await productService.getBySlug(params.slug);
+	if (!product) {
+		return { title: 'Product Not Found', description: 'Product Not Found' };
+	}
+	const { name, description } = product;
+	return {
+		title: name,
+		description: description
+	};
+}
+
+const ProductDetails = async ({ params }) => {
 	const { slug } = params;
-	const product = data.products.find(d => d.slug == slug);
+	const product = await productService.getBySlug(slug);
 	if (!product) {
 		return <div>Product Not Found</div>;
 	}
